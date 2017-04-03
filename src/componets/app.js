@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
-import '../assets/css/App.css';
+import {Container} from 'semantic-ui-react';
+
+import SearchBar from '../containers/searchBar';
+import UsersSegment from '../containers/usersSegment';
 
 class App extends Component {
   render() {
+    const style = {
+        margin: '20px'
+    };
+
     return (
-      <div className="App">
-        <div className="App-header">
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-          <div>
-              <h1>La minervaaaaaaaaaa</h1>
-          </div>
-      </div>
+      <Container style={style}>
+        <SearchBar/>
+        <UsersSegment/>
+      </Container>
     );
   }
 }
