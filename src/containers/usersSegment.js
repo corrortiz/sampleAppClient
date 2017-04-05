@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Container, Grid, Segment} from "semantic-ui-react";
 import {connect} from "react-redux";
-import {deleteUser, fetchUsers} from "../action/index";
+import {deleteUser, fetchUsers, setSingleUser} from "../action/index";
 
 import ButtonAddUser from "../componets/buttonAddUser";
 import UsersAcoordion from "../componets/usersAcoordion";
@@ -18,10 +18,19 @@ class UsersSegments extends Component{
         });
     }
 
+    onClick(user){
+        this.props.setSingleUser(user);
+    }
+
     renderAcordion(){
         return this.props.users.map((user)=>{
             return(
-                <UsersAcoordion user={user} key={user.idUser} onDelete={this.onDelete.bind(this)}/>
+                <UsersAcoordion
+                    user={user}
+                    key={user.idUser}
+                    onDelete={this.onDelete.bind(this)}
+                    onClick={this.onClick.bind(this)}
+                />
             );
         })
     }
@@ -55,4 +64,4 @@ function mapStateToProps(state) {
     return {users: state.user.all}
 }
 
-export default connect(mapStateToProps, {fetchUsers, deleteUser})(UsersSegments);
+export default connect(mapStateToProps, {fetchUsers, deleteUser, setSingleUser})(UsersSegments);

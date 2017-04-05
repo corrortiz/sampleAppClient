@@ -1,5 +1,5 @@
 {
-  "name": "boilerPlateAOHyS",
+  "name": "sampleCRUDAppClient",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {

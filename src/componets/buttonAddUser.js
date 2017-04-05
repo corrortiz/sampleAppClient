@@ -1,8 +1,6 @@
-import React from 'react';
-import {Button, Icon, Popup} from 'semantic-ui-react'
-
-import AddUserForm from '../containers/addUserForm';
-
+import React from "react";
+import {Button, Icon, Popup} from "semantic-ui-react";
+import FormCreate from "../containers/formCreate";
 
 const ButtonAddUser = (
     <Button animated='fade' color='blue' size='massive' floated='right'>
@@ -17,7 +15,7 @@ export default () => {
     return (
         <Popup
             trigger={ButtonAddUser}
-            content={<AddUserForm />}
+            content={<FormCreate />}
             on='click'
             position='left center'
         />
