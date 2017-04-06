@@ -19,7 +19,7 @@ This is the client part of a CRUD APP sample made in ReactJS
 * [Semantic-UI](react.semantic-ui.com)
 
 # Installation
-This is only the part of the client of the application, it is necessary also to have the server part to work in a correct way, you can find it [here](www.google.com)
+This is only the part of the client of the application, it is necessary also to have the server part to work in a correct way, you can find it [here](https://github.com/corrortiz/sampleAppServer)
 
 Once the server is running the following steps must be performed:
 
