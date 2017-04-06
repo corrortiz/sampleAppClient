@@ -8,10 +8,7 @@ import {connect} from 'react-redux'
 
 class FormCreate extends Component {
 
-    /**
-     * mehtod for handling on submit
-     * @param props
-     */
+
     onSubmit = (props) =>{
         this.props.createUser(props)
             .then(()=>{
@@ -85,12 +82,14 @@ const validate = values=> {
     return errors;
 };
 
+//Wraps the in redux-form
 FormCreate = reduxForm({
-    form: 'initializeFromState',
+    form: 'formCreateUser',
     validate
 })(FormCreate);
 
-FormCreate = connect(null,{createUser, fetchUsers}
-)(FormCreate);
+//Wraps the actions for use as props
+FormCreate = connect(null,{createUser, fetchUsers})(FormCreate);
 
+//exports the component
 export default FormCreate;

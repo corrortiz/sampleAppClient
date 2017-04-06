@@ -18,6 +18,7 @@ class searchBar extends Component {
 
     onClick(e){
         e.preventDefault();
+        //checks if brings all the users or the search term
         if(this.state.term === '' || this.state.term === 'all'){
             this.props.fetchUsers();
         }else {

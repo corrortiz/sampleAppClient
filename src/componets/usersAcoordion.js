@@ -4,8 +4,6 @@ import {Accordion, Grid, Icon, Segment} from "semantic-ui-react";
 import UserDescription from "./userDescription";
 import ButtonEditUser from "./buttonEditUser";
 
-
-
 export default ({user, onDelete, onClick}) => {
     return (
         <Accordion fluid onTitleClick={()=>onClick(user)}>

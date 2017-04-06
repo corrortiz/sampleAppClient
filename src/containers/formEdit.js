@@ -86,11 +86,13 @@ const validate = values=> {
     return errors;
 };
 
+//Wraps redux-form
 FormEdit = reduxForm({
     form: 'formEdit',
     validate
 })(FormEdit);
 
+//Wraps the userReducer and the actions
 FormEdit = connect(
     state => ({
         initialValues: state.user.user
@@ -98,4 +100,5 @@ FormEdit = connect(
     {updateUser, fetchUsers, setSingleUser}
 )(FormEdit);
 
+//Exports the component
 export default FormEdit;
