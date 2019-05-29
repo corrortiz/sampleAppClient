@@ -9,7 +9,7 @@
     "semantic-ui": "^2.2.10"
   },
   "dependencies": {
-    "axios": "^0.15.3",
+    "axios": "^0.18.0",
     "faker": "^4.1.0",
     "lodash": "^4.17.4",
     "react": "^15.4.2",
